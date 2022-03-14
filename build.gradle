@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'java'
+}
+
+group 'com.alsatpardakht'
+version '1.2.2'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // Coroutines
+    def coroutine_version = "1.5.2"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
+
+    implementation "com.alsatpardakht:alsatipgcore:1.2.2"
+//    implementation project(":AlsatIPGCore")
+
+    implementation project(":AlsatIPGDesktop")
+}
+
+test {
+    useJUnitPlatform()
+}

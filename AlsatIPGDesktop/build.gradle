@@ -1,0 +1,110 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java'
+    id 'maven-publish'
+    id 'signing'
+}
+
+group 'com.alsatpardakht'
+version '1.2.2'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+    withJavadocJar()
+    withSourcesJar()
+}
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    // Ktor
+    def ktor_version = "1.6.3"
+    implementation "io.ktor:ktor-client-core:$ktor_version"
+    implementation "io.ktor:ktor-client-cio:$ktor_version"
+    implementation "io.ktor:ktor-client-serialization:$ktor_version"
+    implementation "io.ktor:ktor-client-logging:$ktor_version"
+
+    // Coroutines
+    def coroutines_version = "1.5.2"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+
+    implementation "com.alsatpardakht:alsatipgcore:1.2.2"
+//    implementation project(":AlsatIPGCore")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.alsatpardakht'
+            artifactId = 'alsatipgdesktop'
+            version = '1.2.2'
+            from components.java
+
+            pom {
+                name = 'AlsatIPGDesktop'
+                description = 'AlsatIPGDesktop is an open-source Kotlin Desktop library to connect Alsat pardakht peyment API'
+                url = 'https://github.com/AlsatPardakht/AlsatIPGDesktop'
+                inceptionYear = '2022'
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+
+                organization {
+                    name = 'Alsat pardakht'
+                    url = 'https://alsatpardakht.com'
+                }
+
+                developers {
+                    developer {
+                        id = 'erfanmhat'
+                        name = 'erfan mahdavi athar'
+                        email = 'erfan.mh.at@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection = 'scm:git:git:github.com/AlsatPardakht/AlsatIPGDesktop'
+                    developerConnection = 'scm:git:ssh://github.com/AlsatPardakht/AlsatIPGDesktop'
+                    url = 'https://github.com/AlsatPardakht/AlsatIPGDesktop'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "OSSRH"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = project.properties["ossrhUsername"]
+                password = project.properties["ossrhPassword"]
+            }
+        }
+    }
+}
+
+signing {
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if (JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
+}
