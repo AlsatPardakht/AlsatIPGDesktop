@@ -11,10 +11,7 @@ import com.alsatpardakht.alsatipgcore.domain.model.PaymentValidationResult
 import com.alsatpardakht.alsatipgcore.domain.model.TashimModel
 import com.alsatpardakht.alsatipgcore.domain.use_case.PaymentSignUseCase
 import com.alsatpardakht.alsatipgcore.domain.use_case.PaymentValidationUseCase
-import com.alsatpardakht.alsatipgdesktop.util.LiveData
-import com.alsatpardakht.alsatipgdesktop.util.MutableLiveData
-import com.alsatpardakht.alsatipgdesktop.util.asFlow
-import com.alsatpardakht.alsatipgdesktop.util.queryStringToParameters
+import com.alsatpardakht.alsatipgdesktop.util.*
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.features.json.*
@@ -116,8 +113,8 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
         Amount: Long,
         Api: String,
         RedirectAddress: String,
-        Tashim: List<TashimModel>,
-        InvoiceNumber: String = ""
+        InvoiceNumber: String,
+        Tashim: List<TashimModel>
     ) = sign(
         Amount = Amount,
         Api = Api,
@@ -127,19 +124,21 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
         Tashim = Tashim
     )
 
-    private fun validation(Api: String, data: URI, Type: PaymentType): LiveData<PaymentValidationResult> {
-        var tref: String? = ""
-        var iD: String? = ""
-        var iN: String? = ""
-        var PayId: String? = ""
-        for (param in data.query.queryStringToParameters()) {
-            when (param.key) {
-                "tref" -> tref = param.value
-                "iD" -> iD = param.value
-                "iN" -> iN = param.value
-                "PayId" -> PayId = param.value
-            }
-        }
+    fun signVaset(
+        Amount: Long,
+        Api: String,
+        RedirectAddress: String,
+        Tashim: List<TashimModel>
+    ) = sign(
+        Amount = Amount,
+        Api = Api,
+        InvoiceNumber = "",
+        RedirectAddress = RedirectAddress,
+        Type = PaymentType.Vaset,
+        Tashim = Tashim
+    )
+
+    private fun validation(Api: String, tref: String, iN: String, iD: String, Type: PaymentType, PayId: String) {
         CoroutineScope(Dispatchers.Default).launch {
             paymentValidationUseCase.execute(
                 Api = Api,
@@ -161,6 +160,17 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
                 }
             }
         }
+    }
+
+    private fun validation(Api: String, data: URI, Type: PaymentType): LiveData<PaymentValidationResult> {
+        validation(
+            Api = Api,
+            tref = getQueryValueByKey(data, "tref"),
+            iN = getQueryValueByKey(data, "iN"),
+            iD = getQueryValueByKey(data, "iD"),
+            Type = Type,
+            PayId = getQueryValueByKey(data, "PayId")
+        )
         return paymentValidationStatus
     }
 
@@ -170,9 +180,21 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
         Api = Api, data = data, Type = PaymentType.Mostaghim
     )
 
+    fun validationMostaghim(
+        Api: String, tref: String, iN: String, iD: String, PayId: String
+    ) = validation(
+        Api = Api, tref = tref, iN = iN, iD = iD, Type = PaymentType.Mostaghim, PayId = PayId
+    )
+
     fun validationVaset(
         Api: String, data: URI
     ) = validation(
         Api = Api, data = data, Type = PaymentType.Vaset
+    )
+
+    fun validationVaset(
+        Api: String, tref: String, iN: String, iD: String, PayId: String
+    ) = validation(
+        Api = Api, tref = tref, iN = iN, iD = iD, Type = PaymentType.Vaset, PayId = PayId
     )
 }

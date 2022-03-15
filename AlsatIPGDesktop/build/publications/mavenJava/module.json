@@ -3,7 +3,7 @@
   "component": {
     "group": "com.alsatpardakht",
     "module": "alsatipgdesktop",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -27,13 +27,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.2.jar",
-          "url": "alsatipgdesktop-1.2.2.jar",
-          "size": 29581,
-          "sha512": "095f420a2e0d7e3e98b3ba0cdee5d90026d08e924e11f85159615cdad132f50a620202a566f7080e369f84d1b07b2cfcfd34c0883f3ee86edd6b71ebc8257f99",
-          "sha256": "73344f28122a6e352f46d41085f51ca377bbb19f28cd70c579f97a0c52f29342",
-          "sha1": "24bbb0f826c264ea41f4fed4825141406956f21c",
-          "md5": "0d039f4f6941064a819d36039a87834e"
+          "name": "alsatipgdesktop-1.2.4.jar",
+          "url": "alsatipgdesktop-1.2.4.jar",
+          "size": 28627,
+          "sha512": "ad168be55e8a444bcc950e32c57450a808fc61ac3fbe9393adeb40e38bdd4113d98f2e352cced6efb7a12ef261984ee28612ca2957ddbb675b681e26473d458b",
+          "sha256": "417581adf412702c237f9627ea0841cc67756de39d4ad32cb0c0efbbd2119192",
+          "sha1": "529dcb5b99d6e08461eac4b077bf63615539ea78",
+          "md5": "71eda78048643b74a3b6860fdb4b1037"
         }
       ]
     },
@@ -101,13 +101,13 @@
       ],
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.2.jar",
-          "url": "alsatipgdesktop-1.2.2.jar",
-          "size": 29581,
-          "sha512": "095f420a2e0d7e3e98b3ba0cdee5d90026d08e924e11f85159615cdad132f50a620202a566f7080e369f84d1b07b2cfcfd34c0883f3ee86edd6b71ebc8257f99",
-          "sha256": "73344f28122a6e352f46d41085f51ca377bbb19f28cd70c579f97a0c52f29342",
-          "sha1": "24bbb0f826c264ea41f4fed4825141406956f21c",
-          "md5": "0d039f4f6941064a819d36039a87834e"
+          "name": "alsatipgdesktop-1.2.4.jar",
+          "url": "alsatipgdesktop-1.2.4.jar",
+          "size": 28627,
+          "sha512": "ad168be55e8a444bcc950e32c57450a808fc61ac3fbe9393adeb40e38bdd4113d98f2e352cced6efb7a12ef261984ee28612ca2957ddbb675b681e26473d458b",
+          "sha256": "417581adf412702c237f9627ea0841cc67756de39d4ad32cb0c0efbbd2119192",
+          "sha1": "529dcb5b99d6e08461eac4b077bf63615539ea78",
+          "md5": "71eda78048643b74a3b6860fdb4b1037"
         }
       ]
     },
@@ -121,13 +121,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.2-javadoc.jar",
-          "url": "alsatipgdesktop-1.2.2-javadoc.jar",
+          "name": "alsatipgdesktop-1.2.4-javadoc.jar",
+          "url": "alsatipgdesktop-1.2.4-javadoc.jar",
           "size": 261,
-          "sha512": "de5d30c701bee1fe99e22ebd9bc88588970aa10801603f3685c3a63fc4c0f102223a4fcbd6ded2ef16935a572f1973c5741b50249d928fff63b1515d1cf80a93",
-          "sha256": "2d01b1ee2aec1e2a0d2df1b737ea18ec37f5196b15014cb16ad2e9a9fdb1479b",
-          "sha1": "80e74826d88ae4307e610da4ff12b4ab2bf5da6d",
-          "md5": "de8692178f781665b1e94c8c66dc88f4"
+          "sha512": "155b63df4e80712c2435ab4e8fc170330c8449c29d6791332ad6a8be3f61c2f010ca9cc3724152d798553e27e6548dab10d8733b0e20549adc7e6991340e0277",
+          "sha256": "af90d0e4f3df3ceccec7b8ffd92c2c06a5dfbbfa00f452a993835cc601eace64",
+          "sha1": "02de8437b05fb582bb46798285d1d4a3de9452e7",
+          "md5": "69fc75b6f33bec000d70cdc74e31fddd"
         }
       ]
     },
@@ -141,13 +141,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.2-sources.jar",
-          "url": "alsatipgdesktop-1.2.2-sources.jar",
-          "size": 3958,
-          "sha512": "6ee02085ee64662f1a612f1e2bef2280e400db243dfdb5f2323849d549854e868cd5f06005cecf33f38e3d9d250d27cbc4c857afda651cd06b38318aebb0906b",
-          "sha256": "82a63307a21c0946527e982fe2020cebc9ee4c90f4a4c0dee600ef50d41f493b",
-          "sha1": "ab2769ec831ba2ac90a6a24d4996d5d7117ae83d",
-          "md5": "ff5fd0887439e03df37744d0e0da1e2f"
+          "name": "alsatipgdesktop-1.2.4-sources.jar",
+          "url": "alsatipgdesktop-1.2.4-sources.jar",
+          "size": 4033,
+          "sha512": "65dfed9d1ddc8c42732f1137ea521208e5b9e3775e3ad7aa8288e522be2eadaceedcd6487483dbef7b3aab6282290db102cb6e6f8dcac1bf6a9b48e8bd008e9f",
+          "sha256": "3b8b79605535a65cdee021913212ba172fdb8949c6553dc57710b44ef01d579e",
+          "sha1": "c4f9cec6a74f53b9273f0a2eaa8b1ed9b2bae0d1",
+          "md5": "1cbbf8b33b1ff9cb9400d160af8feb8b"
         }
       ]
     }
