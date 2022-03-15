@@ -51,7 +51,7 @@ dependencies {
     ...
 
     implementation 'com.alsatpardakht:alsatipgcore:1.2.2'
-    implementation 'com.alsatpardakht:alsatipgdesktop:1.2.4'
+    implementation 'com.alsatpardakht:alsatipgdesktop:1.2.5'
 
 }
 ```
@@ -63,7 +63,7 @@ dependencies {
 
 ```Kotlin
 implementation("com.alsatpardakht:alsatipgcore:1.2.2")
-implementation("com.alsatpardakht:alsatipgdesktop:1.2.4")
+implementation("com.alsatpardakht:alsatipgdesktop:1.2.5")
 ```
 
 </details>
@@ -81,7 +81,7 @@ implementation("com.alsatpardakht:alsatipgdesktop:1.2.4")
 <dependency>
   <groupId>com.alsatpardakht</groupId>
   <artifactId>alsatipgdesktop</artifactId>
-  <version>1.2.4</version>
+  <version>1.2.5</version>
 </dependency>
 ```
 

@@ -1,5 +1,6 @@
 package com.alsatpardakht.alsatipgdesktop.util
 
+import com.alsatpardakht.alsatipgcore.core.util.decodeQueryParameter
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.*
@@ -27,9 +28,9 @@ fun <T> LiveData<T>.asFlow() = callbackFlow {
     }
 }
 
-fun getQueryValueByKey(data: URI, key: String): String {
+fun getDecodedQueryValueByKey(data: URI, key: String): String {
     for (param in data.query.queryStringToParameters()) {
-        if (param.key == key) return param.value
+        if (param.key == key) return param.value.decodeQueryParameter()
     }
     return ""
 }

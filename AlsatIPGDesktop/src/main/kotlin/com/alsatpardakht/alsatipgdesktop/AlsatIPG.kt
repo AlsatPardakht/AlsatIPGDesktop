@@ -138,7 +138,14 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
         Tashim = Tashim
     )
 
-    private fun validation(Api: String, tref: String, iN: String, iD: String, Type: PaymentType, PayId: String) {
+    private fun validation(
+        Api: String,
+        tref: String,
+        iN: String,
+        iD: String,
+        Type: PaymentType,
+        PayId: String
+    ): LiveData<PaymentValidationResult> {
         CoroutineScope(Dispatchers.Default).launch {
             paymentValidationUseCase.execute(
                 Api = Api,
@@ -160,19 +167,17 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
                 }
             }
         }
-    }
-
-    private fun validation(Api: String, data: URI, Type: PaymentType): LiveData<PaymentValidationResult> {
-        validation(
-            Api = Api,
-            tref = getQueryValueByKey(data, "tref"),
-            iN = getQueryValueByKey(data, "iN"),
-            iD = getQueryValueByKey(data, "iD"),
-            Type = Type,
-            PayId = getQueryValueByKey(data, "PayId")
-        )
         return paymentValidationStatus
     }
+
+    private fun validation(Api: String, data: URI, Type: PaymentType) = validation(
+        Api = Api,
+        tref = getDecodedQueryValueByKey(data, "tref"),
+        iN = getDecodedQueryValueByKey(data, "iN"),
+        iD = getDecodedQueryValueByKey(data, "iD"),
+        Type = Type,
+        PayId = getDecodedQueryValueByKey(data, "PayId")
+    )
 
     fun validationMostaghim(
         Api: String, data: URI
