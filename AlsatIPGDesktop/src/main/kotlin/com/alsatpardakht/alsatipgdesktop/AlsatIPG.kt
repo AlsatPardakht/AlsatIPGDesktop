@@ -186,6 +186,12 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
     )
 
     fun validationMostaghim(
+        Api: String, tref: String, iN: String, iD: String
+    ) = validation(
+        Api = Api, tref = tref, iN = iN, iD = iD, Type = PaymentType.Mostaghim, PayId = ""
+    )
+
+    fun validationMostaghim(
         Api: String, tref: String, iN: String, iD: String, PayId: String
     ) = validation(
         Api = Api, tref = tref, iN = iN, iD = iD, Type = PaymentType.Mostaghim, PayId = PayId
@@ -195,6 +201,12 @@ class AlsatIPG private constructor(private val httpLogging: Boolean) {
         Api: String, data: URI
     ) = validation(
         Api = Api, data = data, Type = PaymentType.Vaset
+    )
+
+    fun validationVaset(
+        Api: String, tref: String, iN: String, iD: String
+    ) = validation(
+        Api = Api, tref = tref, iN = iN, iD = iD, Type = PaymentType.Vaset, PayId = ""
     )
 
     fun validationVaset(

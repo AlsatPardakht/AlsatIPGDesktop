@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.alsatpardakht</groupId>
   <artifactId>alsatipgdesktop</artifactId>
-  <version>1.2.4</version>
+  <version>1.2.6</version>
   <name>AlsatIPGDesktop</name>
   <description>AlsatIPGDesktop is an open-source Kotlin Desktop library to connect Alsat pardakht peyment API</description>
   <url>https://github.com/AlsatPardakht/AlsatIPGDesktop</url>
@@ -75,7 +75,7 @@
     <dependency>
       <groupId>com.alsatpardakht</groupId>
       <artifactId>alsatipgcore</artifactId>
-      <version>1.2.2</version>
+      <version>1.2.3</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>

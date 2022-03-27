@@ -3,7 +3,7 @@
   "component": {
     "group": "com.alsatpardakht",
     "module": "alsatipgdesktop",
-    "version": "1.2.4",
+    "version": "1.2.6",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -27,13 +27,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.4.jar",
-          "url": "alsatipgdesktop-1.2.4.jar",
-          "size": 28627,
-          "sha512": "ad168be55e8a444bcc950e32c57450a808fc61ac3fbe9393adeb40e38bdd4113d98f2e352cced6efb7a12ef261984ee28612ca2957ddbb675b681e26473d458b",
-          "sha256": "417581adf412702c237f9627ea0841cc67756de39d4ad32cb0c0efbbd2119192",
-          "sha1": "529dcb5b99d6e08461eac4b077bf63615539ea78",
-          "md5": "71eda78048643b74a3b6860fdb4b1037"
+          "name": "alsatipgdesktop-1.2.6.jar",
+          "url": "alsatipgdesktop-1.2.6.jar",
+          "size": 28803,
+          "sha512": "f03a2eb88d8edf8361e641875b3e64dec9afee7a2c8d8704a8a956251a246f98ffae81e7b11e3031b92c060b749dffe8a29b3f226b096752e51f8a1a394fbf72",
+          "sha256": "b43a132ecfa7ac49dc68df92c74a682a5dfdab120a16dcfbd83507314917256b",
+          "sha1": "402b9c964c1dc856eb503508855f8779a9c1e0d5",
+          "md5": "b813564f1a5a42815aa0d0ed3e630518"
         }
       ]
     },
@@ -95,19 +95,19 @@
           "group": "com.alsatpardakht",
           "module": "alsatipgcore",
           "version": {
-            "requires": "1.2.2"
+            "requires": "1.2.3"
           }
         }
       ],
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.4.jar",
-          "url": "alsatipgdesktop-1.2.4.jar",
-          "size": 28627,
-          "sha512": "ad168be55e8a444bcc950e32c57450a808fc61ac3fbe9393adeb40e38bdd4113d98f2e352cced6efb7a12ef261984ee28612ca2957ddbb675b681e26473d458b",
-          "sha256": "417581adf412702c237f9627ea0841cc67756de39d4ad32cb0c0efbbd2119192",
-          "sha1": "529dcb5b99d6e08461eac4b077bf63615539ea78",
-          "md5": "71eda78048643b74a3b6860fdb4b1037"
+          "name": "alsatipgdesktop-1.2.6.jar",
+          "url": "alsatipgdesktop-1.2.6.jar",
+          "size": 28803,
+          "sha512": "f03a2eb88d8edf8361e641875b3e64dec9afee7a2c8d8704a8a956251a246f98ffae81e7b11e3031b92c060b749dffe8a29b3f226b096752e51f8a1a394fbf72",
+          "sha256": "b43a132ecfa7ac49dc68df92c74a682a5dfdab120a16dcfbd83507314917256b",
+          "sha1": "402b9c964c1dc856eb503508855f8779a9c1e0d5",
+          "md5": "b813564f1a5a42815aa0d0ed3e630518"
         }
       ]
     },
@@ -121,13 +121,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.4-javadoc.jar",
-          "url": "alsatipgdesktop-1.2.4-javadoc.jar",
+          "name": "alsatipgdesktop-1.2.6-javadoc.jar",
+          "url": "alsatipgdesktop-1.2.6-javadoc.jar",
           "size": 261,
-          "sha512": "155b63df4e80712c2435ab4e8fc170330c8449c29d6791332ad6a8be3f61c2f010ca9cc3724152d798553e27e6548dab10d8733b0e20549adc7e6991340e0277",
-          "sha256": "af90d0e4f3df3ceccec7b8ffd92c2c06a5dfbbfa00f452a993835cc601eace64",
-          "sha1": "02de8437b05fb582bb46798285d1d4a3de9452e7",
-          "md5": "69fc75b6f33bec000d70cdc74e31fddd"
+          "sha512": "3f80265e158e59f146b6640d0838f9e31ce9cc7c6bc796d08c88af273e5d63ec4359515118ace65331ad3210e42f180196cf94f8191f3dbc2af001d9f4cacb53",
+          "sha256": "2ba69fe9337433a008b7b5294383c8f329ecf79acfde99258b713a22b123135b",
+          "sha1": "0544932e0bbc2d5be0023c4b5579227a8bbc4e7a",
+          "md5": "a6891fb7253e8fd7797d67ec9472d401"
         }
       ]
     },
@@ -141,13 +141,13 @@
       },
       "files": [
         {
-          "name": "alsatipgdesktop-1.2.4-sources.jar",
-          "url": "alsatipgdesktop-1.2.4-sources.jar",
-          "size": 4033,
-          "sha512": "65dfed9d1ddc8c42732f1137ea521208e5b9e3775e3ad7aa8288e522be2eadaceedcd6487483dbef7b3aab6282290db102cb6e6f8dcac1bf6a9b48e8bd008e9f",
-          "sha256": "3b8b79605535a65cdee021913212ba172fdb8949c6553dc57710b44ef01d579e",
-          "sha1": "c4f9cec6a74f53b9273f0a2eaa8b1ed9b2bae0d1",
-          "md5": "1cbbf8b33b1ff9cb9400d160af8feb8b"
+          "name": "alsatipgdesktop-1.2.6-sources.jar",
+          "url": "alsatipgdesktop-1.2.6-sources.jar",
+          "size": 4075,
+          "sha512": "2b8b2296b54a2324bda42fb350bdf270a3554d710dcc9d641e01f6aef1a9fa6deba4c76dadfbf7ea2220f556633487605a40fd317c46292bc4447bc0a7050a02",
+          "sha256": "00c7eeaf9df688416e5a62ad9b8f447fcb74c208afa304dfc66280c5e4cf768e",
+          "sha1": "e0e7e9e3d412920787f6f24cca0fa0387b5d5313",
+          "md5": "9eb5ef3581f0f84825d8e97726449671"
         }
       ]
     }

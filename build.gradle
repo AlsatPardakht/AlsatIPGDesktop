@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.alsatpardakht'
-version '1.2.5'
+version '1.2.6'
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ dependencies {
     def coroutine_version = "1.5.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
 
-    implementation "com.alsatpardakht:alsatipgcore:1.2.2"
+    implementation "com.alsatpardakht:alsatipgcore:1.2.3"
 //    implementation project(":AlsatIPGCore")
 
     implementation project(":AlsatIPGDesktop")
